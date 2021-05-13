@@ -1,0 +1,7 @@
+C:\Users\Ivana\Desktop\NDD\CubleDaLeitura\CubleDaLeitura.ConsoleApp\obj\Debug\CubleDaLeitura.ConsoleApp.csprojAssemblyReference.cache
+C:\Users\Ivana\Desktop\NDD\CubleDaLeitura\CubleDaLeitura.ConsoleApp\obj\Debug\CubleDaLeitura.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Ivana\Desktop\NDD\CubleDaLeitura\CubleDaLeitura.ConsoleApp\bin\Debug\CubleDaLeitura.ConsoleApp.exe.config
+C:\Users\Ivana\Desktop\NDD\CubleDaLeitura\CubleDaLeitura.ConsoleApp\bin\Debug\CubleDaLeitura.ConsoleApp.exe
+C:\Users\Ivana\Desktop\NDD\CubleDaLeitura\CubleDaLeitura.ConsoleApp\bin\Debug\CubleDaLeitura.ConsoleApp.pdb
+C:\Users\Ivana\Desktop\NDD\CubleDaLeitura\CubleDaLeitura.ConsoleApp\obj\Debug\CubleDaLeitura.ConsoleApp.exe
+C:\Users\Ivana\Desktop\NDD\CubleDaLeitura\CubleDaLeitura.ConsoleApp\obj\Debug\CubleDaLeitura.ConsoleApp.pdb
