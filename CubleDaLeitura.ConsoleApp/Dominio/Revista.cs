@@ -14,7 +14,7 @@ namespace CubleDaLeitura.ConsoleApp.Dominio
         public int AnoDaRevista;
         public Caixa CaixaOndeEsta;
         public bool emprestado;
-
+        
         public Revista()
         {
             id = GeradorId.GerarIdRevista();
