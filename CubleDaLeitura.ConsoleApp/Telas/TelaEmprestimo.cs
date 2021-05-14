@@ -27,10 +27,13 @@ namespace CubleDaLeitura.ConsoleApp.Telas
 
         public void Devolver()
         {
-            VisualizarEmAberto();
-            Console.WriteLine("Digite o ID do emprestimo que será devolvido: ");
-            int idDevolucao = Convert.ToInt32(Console.ReadLine());
-            controladorEmprestimo.Devolver(idDevolucao);
+            bool vazio = VisualizarEmAberto();
+            if (vazio == false)
+            {
+                Console.WriteLine("Digite o ID do emprestimo que será devolvido: ");
+                int idDevolucao = Convert.ToInt32(Console.ReadLine());
+                controladorEmprestimo.Devolver(idDevolucao);
+            }
         }
 
         internal void VisualizarHistorico()
@@ -44,7 +47,7 @@ namespace CubleDaLeitura.ConsoleApp.Telas
             }
             else
             {
-                Console.WriteLine("Digite o mês dos emprestimos que deseja visualizar: ");
+                Console.WriteLine("Digite o mês dos emprestimos que deseja visualizar: (MM)");
                 string mesEmprestimo = Console.ReadLine();
 
                 Console.WriteLine("    ---Emprestimos-Todos---");
@@ -67,7 +70,7 @@ namespace CubleDaLeitura.ConsoleApp.Telas
             }
         }
 
-        internal void VisualizarEmAberto()
+        internal bool VisualizarEmAberto()
         {
             Console.Clear();
             Emprestimo[] emprestimo = controladorEmprestimo.SelecionarTodasEmprestimos();
@@ -75,6 +78,7 @@ namespace CubleDaLeitura.ConsoleApp.Telas
             {
                 Console.WriteLine("Nenhuma emprestimo realizado...");
                 Console.ReadLine();
+                return true;
             }
             else
             {
@@ -90,26 +94,32 @@ namespace CubleDaLeitura.ConsoleApp.Telas
                         Console.WriteLine("Data de devolução: " + emprestimo[i].dataDevolucao.ToString("dd/MM/yyyy"));
                     }
                 }
-                Console.ReadLine();            
+                Console.ReadLine();
+                return false;
             }
         }
 
         internal void Emprestar(int id, TelaRevista telaRevista, TelaAmiguinho telaAmiguinho)
         {
-            telaRevista.Visualizar();
-            Console.WriteLine("Digite o ID da revista que será emprestada: ");
-            int idRevista = Convert.ToInt32(Console.ReadLine());
+            bool vazio = telaRevista.Visualizar();
+            if (vazio == false)
+            {
+                Console.WriteLine("Digite o ID da revista que será emprestada: ");
+                int idRevista = Convert.ToInt32(Console.ReadLine());
 
-            telaAmiguinho.Visualizar();
-            Console.WriteLine("Digite o ID do amigo que deseja pegar emprestado: ");
-            int idAmigo = Convert.ToInt32(Console.ReadLine());
+                bool vazio2 = telaAmiguinho.Visualizar();
+                if (vazio2 == false)
+                {
+                    Console.WriteLine("Digite o ID do amigo que deseja pegar emprestado: ");
+                    int idAmigo = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Digite o dia de devolução");
-            DateTime dataDevolucao = Convert.ToDateTime(Console.ReadLine());
-            DateTime dataEmprestimo = DateTime.Now;
+                    Console.WriteLine("Digite o dia de devolução");
+                    DateTime dataDevolucao = Convert.ToDateTime(Console.ReadLine());
+                    DateTime dataEmprestimo = DateTime.Now;
 
-            controladorEmprestimo.Emprestimo(id , idRevista, idAmigo, dataDevolucao, dataEmprestimo);
-            
+                    controladorEmprestimo.Emprestimo(id, idRevista, idAmigo, dataDevolucao, dataEmprestimo);
+                }
+            }          
         }
     }
 }

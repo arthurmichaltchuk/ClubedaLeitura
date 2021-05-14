@@ -26,7 +26,8 @@ namespace CubleDaLeitura.ConsoleApp.Controladores
                 revista = new Revista();
             else
                 revista = (Revista)registros[posicao];
-         
+
+            revista.emprestado = false;
             revista.TipoDeColecao = tipoDeColecao;
             revista.NumeroDaEdicao = dataFabricacao;
             revista.AnoDaRevista = anoDaRevista;

@@ -13,7 +13,7 @@ namespace CubleDaLeitura.ConsoleApp.Dominio
         public double NumeroDaEdicao;
         public int AnoDaRevista;
         public Caixa CaixaOndeEsta;
-        public bool emprestado = false;
+        public bool emprestado;
 
         public Revista()
         {

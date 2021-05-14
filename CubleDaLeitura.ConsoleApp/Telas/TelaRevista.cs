@@ -60,7 +60,7 @@ namespace CubleDaLeitura.ConsoleApp.Telas
                 Console.WriteLine("    ---Revistas---");
                 for (int i = 0; i < revistas.Length; i++)
                 {
-                    if (revistas[i].emprestado == true)
+                    if (revistas[i].emprestado == false)
                     {
                         Console.WriteLine("\nID: " + revistas[i].id);
                         Console.WriteLine("Nome da revista: " + revistas[i].TipoDeColecao);

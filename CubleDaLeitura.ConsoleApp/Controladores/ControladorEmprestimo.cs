@@ -40,7 +40,7 @@ namespace CubleDaLeitura.ConsoleApp.Controladores
             if (emprestimo.amigo.emprestou == false)
             {
                 registros[posicao] = emprestimo;
-                emprestimo.revista.emprestado = false;
+                emprestimo.revista.emprestado = true;
                 emprestimo.amigo.emprestou = true;
             }
             else
@@ -60,9 +60,8 @@ namespace CubleDaLeitura.ConsoleApp.Controladores
             emprestimo = (Emprestimo)registros[posicao];
             int idAmigo = emprestimo.amigo.id;
 
-
             emprestimo.aberto = false;
-
+            emprestimo.revista.emprestado = false;
             emprestimo.amigo.emprestou = false;
         }
 
